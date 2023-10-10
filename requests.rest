@@ -1,0 +1,30 @@
+GET http://localhost:8000/rest/
+
+###
+
+POST http://localhost:8000/rest/
+Content-Type: application/json
+
+{
+    "fullname":"Razak Mohamed S",
+    "contact":234323434,
+    "experience":10.5,
+    "commercials":13900,
+    "expert":"Java"
+}
+
+###
+PUT http://localhost:8000/rest
+Content-Type: application/json
+
+{
+    "fullname":"Razak Mohamed S",
+    "contact":234323434,
+    "experience":11,
+    "commercials":15000,
+    "expert":"Java"
+}
+
+###
+
+DELETE http://localhost:8000/rest/6524d81e17ccb70e48351280

@@ -1,0 +1,30 @@
+version: '3'
+services:
+  mongodb:
+    image: "mongo"
+    volumes:
+      - data:/data/db
+  backend:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - logs:/app/logs
+      - /app
+      - /app/node_modules
+    depends_on:
+      - mongodb
+volumes:
+  data:
+  logs:
+
+# services:
+#   backend:
+#     container_name: express-backend
+#     build: ./backend
+#     ports:
+#       - "8000:8000"
+#     depends_on:
+#       - mongo
+#     environment:
+#       - MONGODB_URI=
